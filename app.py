@@ -21,9 +21,13 @@ st.write("Dashboard de visualização de sequências de DNA")
 # ======================
 # LEITURA DOS DADOS
 # ======================
-with open("data/processed/resultados.json", "r") as file:
-    dados = json.load(file)
+import os
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+CAMINHO = os.path.join(BASE_DIR, "data", "processed", "resultados.json")
+
+with open(CAMINHO, "r") as file:
+    dados = json.load(file)
 # ======================
 # ORGANIZAÇÃO DOS DADOS
 # ======================
